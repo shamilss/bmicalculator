@@ -1,0 +1,148 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#inside {
+  width: 75%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  z-index: -1;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+@keyframes moveup{
+  0%{
+    transform: translateY(30px) scale(0.9);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes movedown{
+  0%{
+    transform: translateY(-30px) scale(0.9);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+#user {
+  border-radius: 25px;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+#result {
+  border-radius: 25px;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+#note {
+  border-radius: 25px;
+}
+
+#weight {
+  margin-right: 10px;
+}
+
+#height {
+  margin-left: 10px;
+}
+
+#b1 {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+#b2 {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+#mainhead{
+  animation: movedown 1s ease-in-out;
+}
+
+#mainpara,#maintable,#user{
+  animation: moveup 1s ease-in-out;
+}
+
+#result,#note{
+  animation: moveup .6s ease-in-out;
+}
+
+@media(max-width:768px) {
+  #inside {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    z-index: -1;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-bottom: initial;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #details {
+    flex-direction: column;
+  }
+
+  #user {
+    width: 90%;
+    margin: auto;
+  }
+
+  #weight {
+    margin-right: initial;
+  }
+
+  #height {
+    margin-top: 20px;
+    margin-left: initial;
+  }
+
+  #buttons {
+    flex-direction: column;
+  }
+
+  #b1 {
+    margin-right: initial;
+  }
+
+  #b2 {
+    margin-left: initial;
+  }
+
+  #result {
+    width: 90%;
+    margin: auto;
+  }
+
+  #note {
+    width: 90%;
+    margin: auto;
+  }
+}
